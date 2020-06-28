@@ -11,27 +11,12 @@ export const flightsListRecieved = (flightsList) => {
     };
 };
 
-
 export const getFlightsList = () => {
     const thunkAction = function(dispatch) {
-        fetchAirportData().then((data) => {
-            dispatch(
-                flightsListRecieved(
-                    data.body.flightsList.map((elem) => {
-                        return {
-                            id: elem.ID,
-                            terminal: elem.term,
-                            localTime: elem.actual,
-                            destination: elem['airportFromID.name_en'],
-                            status: elem.status,
-                            airlineLogo: elem.airline.en.logoName,
-                            airlineName: elem.airline.en.name,
-                            flight: elem.codeShareData[0].codeShare,
-                        };
-                    })
-                )
-            );
-        });
-    };
+        fetchAirportData()
+            .then(flightsList => {
+                dispatch(flightsListRecieved(flightsList));
+            });
+    }
     return thunkAction;
 };

@@ -1,13 +1,9 @@
+import moment from 'moment';
+
 const baseUrl = 'https://api.iev.aero/api/flights';
 
+const date = moment().format('DD-MM-YYYY');
 
 export const fetchAirportData = () =>
-    fetch(`${baseUrl}`)
-    .then(response => response.json());
-        // {
-        // if (response.ok) {
-        //     return response.json();
-        // }
-        // throw new Error("Failed to download")
-    // });
-    
+    fetch(`${baseUrl}/${date}`)
+    .then((response) => response.json());
