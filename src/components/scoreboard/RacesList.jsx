@@ -3,15 +3,14 @@ import { connect } from 'react-redux';
 import { flightsDataSelector } from '../scoreboard.selectors';
 import * as scoreboardActions from '../scoreboard.actions';
 
-const RacesList = ({ flightsList,  getArrivalList, getDepartureList }) => {
-	
+const RacesList = ({ flightsList, getArrivalList, getDepartureList }) => {
 	useEffect(() => {
 		return getArrivalList();
 	}, []);
 
 	return (
 		<tbody>
-			{flightsList.map((elem) => {
+			{flightsList.map((elem) => (
 				<>
 					<tr className="table table-striped__grey" key={elem.id}>
 						<th>{elem.terminal}</th>
@@ -19,7 +18,10 @@ const RacesList = ({ flightsList,  getArrivalList, getDepartureList }) => {
 						<th>{elem.destination}</th>
 						<th>{elem.status}</th>
 						<th>
-							<img type="logo" className="logo" src={`${elem.airlineLogo}`} />
+							<span className="one-airline">
+								<img type="logo" className="logo" src={`${elem.airlineLogo}`} />
+								{elem.airlineName}
+							</span>
 						</th>
 						<th>{elem.flight}</th>
 					</tr>
@@ -29,13 +31,15 @@ const RacesList = ({ flightsList,  getArrivalList, getDepartureList }) => {
 						<th>{elem.destination}</th>
 						<th>{elem.status}</th>
 						<th>
-							<img type="logo" className="logo" src={`${elem.airlineLogo}`} />
-						{elem.airlineName} 
+							<span className="one-airline">
+								<img type="logo" className="logo" src={`${elem.airlineLogo}`} />
+								{elem.airlineName}
+							</span>
 						</th>
 						<th>{elem.flight}</th>
 					</tr>
-				</>;
-			})}
+				</>
+			))}
 		</tbody>
 	);
 };
@@ -51,4 +55,3 @@ const mapDispatch = {
 };
 
 export default connect(mapState, mapDispatch)(RacesList);
-

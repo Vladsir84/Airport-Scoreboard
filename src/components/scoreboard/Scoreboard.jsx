@@ -2,10 +2,11 @@ import React from 'react';
 import RacesList from './RacesList';
 
 
+
 const Scoreboard = () => {
 
   return (
-    <>
+    <div className="page">
 
       <div className="search-flights">
         <div className="container">
@@ -87,11 +88,11 @@ const Scoreboard = () => {
 
             </tbody> */}
           
-            <RacesList  />
+            <RacesList />
           
         </table>
       </div>
-    </>
+    </div>
   );
 
 }

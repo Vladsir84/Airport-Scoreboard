@@ -1,5 +1,3 @@
-import { createSelector } from 'reselect';
-
 export const flightsDataSelector = state =>
     state.flights.flightsList;
 

@@ -23,17 +23,6 @@ export const departureListRecieved = (departure) => {
     };
 };
 
-
-// export const getFlightsList = () => {
-//     const thunkAction = function(dispatch) {
-//         fetchAirportData()
-//             .then(flightsList => {
-//                 dispatch(flightsListRecieved(flightsList));
-//             });
-//     }
-//     return thunkAction;
-// };
-
 export const getArrivalList = () => {
     const thunkAction = function(dispatch) {
         fetchAirportData().then((data) => {
