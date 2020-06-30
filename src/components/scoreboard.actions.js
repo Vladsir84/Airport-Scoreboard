@@ -16,7 +16,7 @@ export const arrivalListRecieved = (arrival) => {
 
 export const departureListRecieved = (departure) => {
     return {
-        type: ARRIVAL_LIST_RECIEVED,
+        type: DEPARTURE_LIST_RECIEVED,
         payload: {
             departure,
         },

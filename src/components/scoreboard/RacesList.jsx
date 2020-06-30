@@ -54,6 +54,7 @@ const mapState = (state) => {
 
 const mapDispatch = {
 	getArrivalList: scoreboardActions.getArrivalList,
+	getDepartureList: scoreboardActions.getDepartureList,
 };
 
 export default connect(mapState, mapDispatch)(RacesList);
