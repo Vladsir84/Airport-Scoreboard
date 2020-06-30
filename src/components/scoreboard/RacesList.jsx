@@ -2,19 +2,21 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { flightsDataSelector } from '../scoreboard.selectors';
 import * as scoreboardActions from '../scoreboard.actions';
+import { getTime } from './functions';
 
 const RacesList = ({ flightsList, getArrivalList, getDepartureList }) => {
 	useEffect(() => {
-		return getArrivalList();
+		getArrivalList();
 	}, []);
-
+	
+	
 	return (
 		<tbody>
-			{flightsList.map((elem) => (
+			{flightsList.map((elem) => ( 
 				<>
-					<tr className="table table-striped__grey" key={elem.id}>
+					<tr className="table table-striped__grey" key={Math.random()}>
 						<th>{elem.terminal}</th>
-						<th>{elem.localTime}</th>
+						<th>{getTime(elem.localTime)}</th>
 						<th>{elem.destination}</th>
 						<th>{elem.status}</th>
 						<th>
@@ -25,9 +27,9 @@ const RacesList = ({ flightsList, getArrivalList, getDepartureList }) => {
 						</th>
 						<th>{elem.flight}</th>
 					</tr>
-					<tr className="table table-striped__white" key={elem.id}>
+					<tr className="table table-striped__white" key={Math.random()}>
 						<th>{elem.terminal}</th>
-						<th>{elem.localTime}</th>
+						<th>{getTime(elem.localTime)}</th>
 						<th>{elem.destination}</th>
 						<th>{elem.status}</th>
 						<th>
