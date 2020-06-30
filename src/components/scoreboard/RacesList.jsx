@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import { flightsDataSelector } from '../scoreboard.selectors';
 import * as scoreboardActions from '../scoreboard.actions';
 
-const RacesList = ({ flightsList, getFlightsList }) => {
+const RacesList = ({ flightsList,  getArrivalList, getDepartureList }) => {
 	
 	useEffect(() => {
-		return getFlightsList();
+		return getArrivalList();
 	}, []);
 
 	return (
@@ -47,7 +47,7 @@ const mapState = (state) => {
 };
 
 const mapDispatch = {
-	getFlightsList: scoreboardActions.getFlightsList,
+	getArrivalList: scoreboardActions.getArrivalList,
 };
 
 export default connect(mapState, mapDispatch)(RacesList);

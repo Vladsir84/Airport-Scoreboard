@@ -1,22 +1,83 @@
 import { fetchAirportData } from './scoreboard.gateway';
 
-export const FLIGHTS_LIST_RECIEVED = 'FLIGHT_LIST_RECIEVED';
+export const ARRIVAL_LIST_RECIEVED = 'FLIGHT_LIST_RECIEVED';
+export const DEPARTURE_LIST_RECIEVED = 'FLIGHT_LIST_RECIEVED';
 
-export const flightsListRecieved = (flightsList) => {
+
+export const arrivalListRecieved = (arrival) => {
     return {
-        type: FLIGHTS_LIST_RECIEVED,
+        type: ARRIVAL_LIST_RECIEVED,
         payload: {
-            flightsList,
+            arrival,
         },
     };
 };
 
-export const getFlightsList = () => {
-    const thunkAction = function(dispatch) {
-        fetchAirportData()
-            .then(flightsList => {
-                dispatch(flightsListRecieved(flightsList));
-            });
-    }
-    return thunkAction;
+
+export const departureListRecieved = (departure) => {
+    return {
+        type: ARRIVAL_LIST_RECIEVED,
+        payload: {
+            departure,
+        },
+    };
 };
+
+
+// export const getFlightsList = () => {
+//     const thunkAction = function(dispatch) {
+//         fetchAirportData()
+//             .then(flightsList => {
+//                 dispatch(flightsListRecieved(flightsList));
+//             });
+//     }
+//     return thunkAction;
+// };
+
+export const getArrivalList = () => {
+    const thunkAction = function(dispatch) {
+        fetchAirportData().then((data) => {
+            dispatch(
+                arrivalListRecieved(
+                    data.body.arrival.map((elem) => {
+                        return {
+                            id: elem.ID,
+                            terminal: elem.term,
+                            localTime: elem.actual,
+                            destination: elem['airportFromID.name_en'],
+                            status: elem.status,
+                            airlineLogo: elem.airline.en.logoName,
+                            airlineName: elem.airline.en.name,
+                            flight: elem.codeShareData[0].codeShare,
+                        };
+                    })
+                )
+            );
+        });
+    };
+    return thunkAction;
+}
+
+export const getDepartureList = () => {
+    const thunkAction = function(dispatch) {
+        fetchAirportData().then((data) => {
+            dispatch(
+                departureListRecieved(
+                    data.body.departure.map((elem) => {
+                        return {
+                            id: elem.ID,
+                            terminal: elem.term,
+                            localTime: elem.actual,
+                            destination: elem['airportFromID.name_en'],
+                            status: elem.status,
+                            airlineLogo: elem.airline.en.logoName,
+                            airlineName: elem.airline.en.name,
+                            flight: elem.codeShareData[0].codeShare,
+                        };
+                    })
+                )
+            );
+        });
+    };
+    return thunkAction;
+}
