@@ -156,7 +156,6 @@ thead {
     background: #dee2e6;
     height: 72px;
     color: #212529;
-    // border: 1px solid #dee2e6;
 }
 
 .table-striped__white {
@@ -168,6 +167,7 @@ thead {
 img {
     height: 38px;
     width: 63px;
+    // -webkit-tap-highlight-color: transparent;
 }
 
 .one-airline {
