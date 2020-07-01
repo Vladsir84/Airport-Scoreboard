@@ -2,7 +2,7 @@ import { ARRIVAL_LIST_RECIEVED, DEPARTURE_LIST_RECIEVED } from './scoreboard.act
 
 const initialState = {
     flightsList: [],
-    flightsArrivalList: true,
+    flightsArrivalList: false,
     flightsDepartureList: false,
 };
 

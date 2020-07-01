@@ -92,6 +92,10 @@ body {
     text-align: right;
     line-height: 60px;
     border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 0px 30px 0px 0px;
 }
 
 .nav-item {
@@ -106,18 +110,9 @@ body {
     font-weight: 100;
     border-radius: 0 60px 0 0;
     line-height: 60px;
-}
-
-.nav-link {
     color: #1EB7EE;
     font-size: 24px;
     padding: 0px 0px 0px 30px;
-}
-
-.nav-link__active {
-    color: #FFFFFF;
-    font-size: 24px;
-    padding: 0px 30px 0px 0px;
 }
 
 .tabs-container {
@@ -132,6 +127,7 @@ table {
     margin-bottom: 16px;
     margin-bottom: 1rem;
     color: #212529;
+    border-spacing: 0px;
 }
 
 tr {

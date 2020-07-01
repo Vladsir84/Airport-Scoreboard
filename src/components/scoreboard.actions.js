@@ -1,7 +1,7 @@
 import { fetchAirportData } from './scoreboard.gateway';
 
-export const ARRIVAL_LIST_RECIEVED = 'FLIGHT_LIST_RECIEVED';
-export const DEPARTURE_LIST_RECIEVED = 'FLIGHT_LIST_RECIEVED';
+export const ARRIVAL_LIST_RECIEVED = 'SCOREBOARD/ARRIVAL_LIST_RECIEVED';
+export const DEPARTURE_LIST_RECIEVED = 'SCOREBOARD/DEPARTURE_LIST_RECIEVED';
 
 
 export const arrivalListRecieved = (arrival) => {
@@ -24,7 +24,7 @@ export const departureListRecieved = (departure) => {
 };
 
 export const getArrivalList = () => {
-    const thunkAction = function(dispatch) {
+    const thunkAction = (dispatch) => {
         fetchAirportData().then((data) => {
             dispatch(
                 arrivalListRecieved(
@@ -48,7 +48,7 @@ export const getArrivalList = () => {
 }
 
 export const getDepartureList = () => {
-    const thunkAction = function(dispatch) {
+    const thunkAction = (dispatch) => {
         fetchAirportData().then((data) => {
             dispatch(
                 departureListRecieved(
@@ -57,7 +57,7 @@ export const getDepartureList = () => {
                             id: elem.ID,
                             terminal: elem.term,
                             localTime: elem.actual,
-                            destination: elem['airportFromID.name_en'],
+                            destination: elem['airportToID.name_en'],
                             status: elem.status,
                             airlineLogo: elem.airline.en.logoName,
                             airlineName: elem.airline.en.name,

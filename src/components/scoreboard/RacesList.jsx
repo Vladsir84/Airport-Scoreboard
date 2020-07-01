@@ -1,14 +1,8 @@
-import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import { flightsDataSelector } from '../scoreboard.selectors';
-import * as scoreboardActions from '../scoreboard.actions';
-import { getTime } from './functions';
+/* eslint-disable no-unused-vars */
+import React from 'react';
+import { getTime } from '../functions';
 
-const RacesList = ({ flightsList, getArrivalList, getDepartureList }) => {
-	useEffect(() => {
-		getArrivalList();
-	}, []);
-	
+const RacesList = ({ flightsList }) => {
 	
 	return (
 		<tbody>
@@ -46,15 +40,5 @@ const RacesList = ({ flightsList, getArrivalList, getDepartureList }) => {
 	);
 };
 
-const mapState = (state) => {
-	return {
-		flightsList: flightsDataSelector(state),
-	};
-};
 
-const mapDispatch = {
-	getArrivalList: scoreboardActions.getArrivalList,
-	getDepartureList: scoreboardActions.getDepartureList,
-};
-
-export default connect(mapState, mapDispatch)(RacesList);
+export default RacesList;
