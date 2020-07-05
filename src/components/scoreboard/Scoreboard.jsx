@@ -32,7 +32,7 @@ const Scoreboard = ({ flightsList, getArrivalList, getDepartureList, getFiltered
 					<div className="search-line-container">
 						<Link to={`${history.location.pathname}?search=${filteredText}`}>
 							<form name="searchFlightsForm" action="">
-								<input
+							    <input
 									type="text"
 									value={filteredText}
 									onChange={(event) => setFilteredText(event.target.value)}
