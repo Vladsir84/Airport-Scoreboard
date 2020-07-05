@@ -6,17 +6,15 @@ import Scoreboard from './Scoreboard.jsx';
 import * as scoreboardActions from '../scoreboard.actions';
 
 const Page = ({ getFilteredText }) => {
-    return (
-        <div className="page">
-            <BrowserRouter>
-              <Scoreboard getFilteredText ={getFilteredText} />
-            </BrowserRouter>
-        </div>
-    );
+	return (
+		<BrowserRouter>
+			<Scoreboard getFilteredText={getFilteredText} />
+		</BrowserRouter>
+	);
 };
 
 const mapDispatch = {
-    getFilteredText: scoreboardActions.getFilteredText
-}
+	getFilteredText: scoreboardActions.getFilteredText,
+};
 
 export default connect(null, mapDispatch)(Page);
