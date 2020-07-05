@@ -2,7 +2,7 @@ import { fetchAirportData } from './scoreboard.gateway';
 
 export const ARRIVAL_LIST_RECIEVED = 'SCOREBOARD/ARRIVAL_LIST_RECIEVED';
 export const DEPARTURE_LIST_RECIEVED = 'SCOREBOARD/DEPARTURE_LIST_RECIEVED';
-
+export const FILTERED_TEXT = 'SCOREBOARD/FILTERED_TEXT';
 
 export const arrivalListRecieved = (arrival) => {
     return {
@@ -22,6 +22,16 @@ export const departureListRecieved = (departure) => {
         },
     };
 };
+
+export const getFilteredText = text => {
+    return {
+        type: FILTERED_TEXT,
+        payload: {
+            text
+        }
+    }
+}
+
 
 export const getArrivalList = () => {
     const thunkAction = (dispatch) => {

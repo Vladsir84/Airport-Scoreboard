@@ -6,7 +6,7 @@ const RacesList = ({ flightsList }) => {
 	
 	return (
 		<tbody>
-			{flightsList.map((elem) => ( 
+			{flightsList.map((elem)  => ( 
 				<>
 					<tr className="table table-striped__grey" key={Math.random()}>
 						<th>{elem.terminal}</th>

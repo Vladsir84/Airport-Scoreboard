@@ -1,9 +1,8 @@
-import { ARRIVAL_LIST_RECIEVED, DEPARTURE_LIST_RECIEVED } from './scoreboard.actions';
+import { ARRIVAL_LIST_RECIEVED, DEPARTURE_LIST_RECIEVED, FILTERED_TEXT } from './scoreboard.actions';
 
 const initialState = {
     flightsList: [],
-    flightsArrivalList: false,
-    flightsDepartureList: false,
+    filteredText: '',
 };
 
 const flightsReducer = (state = initialState, action) => {
@@ -13,8 +12,6 @@ const flightsReducer = (state = initialState, action) => {
                 return {
                     ...state,
                     flightsList: action.payload.arrival,
-                    flightsArrivalList: true,
-                    flightsDepartureList: false,
                 };
             }
 
@@ -23,10 +20,17 @@ const flightsReducer = (state = initialState, action) => {
                 return {
                     ...state,
                     flightsList: action.payload.departure,
-                    flightsArrivalList: false,
-                    flightsDepartureList: true,
                 };
             }
+
+        case FILTERED_TEXT:
+            {
+                return {
+                    ...state,
+                    filteredText: action.payload.text,
+                };
+            }
+
 
         default:
             return state;

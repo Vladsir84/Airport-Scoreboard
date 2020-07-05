@@ -1,11 +1,12 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
-import Scoreboard from "./components/scoreboard/Scoreboard";
-import store from "./store";
 import { Provider } from "react-redux";
+import Page from "./components/scoreboard/Page.jsx";
+import store from "./store";
 
 const App = () => (
         <Provider store={store}>
-                <Scoreboard />
+                <Page />
         </Provider>
 )
 
