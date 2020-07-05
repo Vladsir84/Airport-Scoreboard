@@ -9,7 +9,7 @@ const RacesList = ({ flightsList }) => {
 			{flightsList.map((elem)  => ( 
 				<>
 					<tr className="table table-striped__grey" key={Math.random()}>
-						<th className="terminal__grey">{elem.terminal}</th>
+						<th className="terminal">{elem.terminal}</th>
 						<th>{getTime(elem.localTime)}</th>
 						<th>{elem.destination}</th>
 						<th>{elem.status}</th>
@@ -22,7 +22,7 @@ const RacesList = ({ flightsList }) => {
 						<th>{elem.flight}</th>
 					</tr>
 					<tr className="table table-striped__white" key={Math.random()}>
-						<th className="terminal__white">{elem.terminal}</th>
+						<th className="terminal">{elem.terminal}</th>
 						<th>{getTime(elem.localTime)}</th>
 						<th>{elem.destination}</th>
 						<th>{elem.status}</th>

@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { Link, Route, Switch, useHistory, useLocation } from 'react-router-dom';
 import RacesList from './RacesList.jsx';
+import Buttons from './Buttons.jsx';
 import * as scoreboardActions from '../scoreboard.actions';
 import * as scoreboardSelectors from '../scoreboard.selectors';
 
@@ -32,7 +33,7 @@ const Scoreboard = ({ flightsList, getArrivalList, getDepartureList, getFiltered
 					<div className="search-line-container">
 						<Link to={`${history.location.pathname}?search=${filteredText}`}>
 							<form name="searchFlightsForm" action="">
-							    <input
+								<input
 									type="text"
 									value={filteredText}
 									onChange={(event) => setFilteredText(event.target.value)}
@@ -50,25 +51,11 @@ const Scoreboard = ({ flightsList, getArrivalList, getDepartureList, getFiltered
 					</div>
 				</div>
 			</div>
-			<div className="one">
-				<div className="nav_nav-tabs">
-					<div className="container-nav">
-						<Link to="/departures">
-							<button className="nav-item__active" onClick={getDepartureList}>
-								<i className="fas fa-plane-departure" />
-								DEPARTURES
-							</button>
-						</Link>
-						<Link to="/arrivals">
-							<button className="nav-item" onClick={getArrivalList}>
-								<i className="fas fa-plane-arrival" />
-								ARRIVALS
-							</button>
-						</Link>
-					</div>
-				</div>
-			</div>
-			<div className="tabs-container">
+			<Buttons 
+			   getDepartureList={getDepartureList} 
+			   getArrivalList={getArrivalList} 
+			/>
+           <div className="tabs-container">
 				<table>
 					<thead>
 						<tr className="table-striped">
@@ -94,7 +81,7 @@ const Scoreboard = ({ flightsList, getArrivalList, getDepartureList, getFiltered
 const mapState = (state) => {
 	return {
 		flightsList: scoreboardSelectors.flightsDataSelector(state),
-		flightsList: scoreboardSelectors.filteredFlightsSelector(state)
+		flightsList: scoreboardSelectors.filteredFlightsSelector(state),
 	};
 };
 

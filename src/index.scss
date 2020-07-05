@@ -71,7 +71,7 @@ body {
     margin: 0px, 0px, 8px;
 }
 
-.one {
+.buttons {
     margin-left: 70px;
     width: 1140px;
 }
@@ -168,25 +168,7 @@ thead {
     text-decoration: none;
 }
 
-.terminal__grey {
-    color: #63c745;
-    font-weight: 700;
-    border: 1px solid #63c745;
-    border-radius: 50%;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 35px;
-    font-size: 22px;
-    margin-left: 50px;
-    margin-top: 15px;
-    padding-bottom: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-top: 0px;
-}
-
-.terminal__white {
+.terminal {
     color: #63c745;
     font-weight: 700;
     border: 1px solid #63c745;
