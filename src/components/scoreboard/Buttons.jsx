@@ -7,9 +7,7 @@ const Buttons = ({ getArrivalList, getDepartureList }) => {
 		<div className="buttons">
 			<div className="nav_nav-tabs">
 				<div className="container-nav">
-					<Link to="/departures" className="nav-item__active" onClick=
-
-						{getDepartureList}>
+					<Link to="/departures" className="nav-item__active" onClick={getDepartureList}>
 						<i className="fas fa-plane-departure" />
 						DEPARTURES
 					</Link>
