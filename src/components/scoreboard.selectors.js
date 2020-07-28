@@ -7,11 +7,11 @@ export const filteredTextSelector = state => state.flights.filteredText;
 export const filteredFlightsSelector = createSelector(
     [flightsDataSelector, filteredTextSelector],
     (flightsList, filteredText) =>
-    flightsList.filter((elem) => {
-        return (
-            elem.flight.toLowerCase().includes(filteredText.toLowerCase()) ||
-            elem.airlineName.toLowerCase().includes(filteredText.toLowerCase()) ||
-            elem.destination.toLowerCase().includes(filteredText.toLowerCase())
-        );
-    })
+        flightsList.filter((elem) => {
+            return (
+                elem.flight.toLowerCase().includes(filteredText.toLowerCase()) ||
+                elem.airlineName.toLowerCase().includes(filteredText.toLowerCase()) ||
+                elem.destination.toLowerCase().includes(filteredText.toLowerCase())
+            );
+        })
 )
