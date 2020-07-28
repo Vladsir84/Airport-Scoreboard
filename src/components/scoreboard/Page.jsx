@@ -7,15 +7,15 @@ import * as scoreboardActions from "../scoreboard.actions";
 
 
 const Page = ({ getFilteredText }) => {
-	return (
-		<BrowserRouter>
-			<Scoreboard getFilteredText={getFilteredText} />
-		</BrowserRouter>
-	);
+  return (
+    <BrowserRouter>
+      <Scoreboard getFilteredText={getFilteredText} />
+    </BrowserRouter>
+  );
 };
 
 const mapDispatch = {
-	getFilteredText: scoreboardActions.getFilteredText,
+  getFilteredText: scoreboardActions.getFilteredText,
 };
 
 export default connect(null, mapDispatch)(Page);
