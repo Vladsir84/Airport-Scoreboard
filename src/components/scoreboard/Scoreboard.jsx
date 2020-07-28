@@ -67,7 +67,7 @@ const Scoreboard = ({ flightsList, getArrivalList, getDepartureList, getFiltered
 						</tr>
 					</thead>
 					<Switch>
-						<Route path="/:direction">
+						<Route>
 							<RacesList flightsList={flightsList} />
 						</Route>
 					</Switch>
