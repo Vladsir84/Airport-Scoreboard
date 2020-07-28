@@ -24,6 +24,7 @@ const Scoreboard = ({ flightsList, getArrivalList, getDepartureList, getFiltered
 		}
 	}, []);
 
+	
 	return (
 		<div className="page">
 			<div className="search-flights">
