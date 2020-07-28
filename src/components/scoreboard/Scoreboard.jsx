@@ -24,35 +24,35 @@ const Scoreboard = ({ flightsList, getArrivalList, getDepartureList, getFiltered
 		}
 	}, []);
 
-return (
-<div className='page'>
-<div className='search-flights'>
-<div className='container'>
-<h1 className='title'>SEARCH FLIGHT</h1>
-<div className='search-line-container'>
-<Link to={`${history.location.pathname}?search=${filteredText}`}>
-<form name='searchFlightsForm' action=''>
-<input
-type='text'
-value={filteredText}
-onChange={(event) => setFilteredText(event.target.value)}
-placeholder='Airline, destination or flight#'
-/>
-<button
-type='submit'
-className='search-line-container__button'
-onClick={() => getFilteredText(filteredText)}
->
-SEARCH
-</button>
-</form>
-</Link>
-</div>
-</div>
-</div>
-<Buttons getDepartureList={getDepartureList} getArrivalList={getArrivalList} />
-<div className='tabs-container'>
-<table>
+	return (
+		<div className='page'>
+			<div className='search-flights'>
+				<div className='container'>
+					<h1 className='title'>SEARCH FLIGHT</h1>
+					<div className='search-line-container'>
+						<Link to={`${history.location.pathname}?search=${filteredText}`}>
+							<form name='searchFlightsForm' action=''>
+								<input
+									type='text'
+									value={filteredText}
+									onChange={(event) => setFilteredText(event.target.value)}
+									placeholder='Airline, destination or flight#'
+								/>
+								<button
+									type='submit'
+									className='search-line-container__button'
+									onClick={() => getFilteredText(filteredText)}
+								>
+									SEARCH
+              </button>
+							</form>
+						</Link>
+					</div>
+				</div>
+			</div>
+			<Buttons getDepartureList={getDepartureList} getArrivalList={getArrivalList} />
+			<div className='tabs-container'>
+				<table>
 					<thead>
 						<tr className='table-striped'>
 							<th>Terminal</th>
