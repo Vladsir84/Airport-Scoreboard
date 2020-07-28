@@ -9,11 +9,11 @@ const Buttons = ({ getArrivalList, getDepartureList }) => {
         <div className='container-nav'>
           <Link to='/departures' className='nav-item__active' onClick={getDepartureList}>
             <i className='fas fa-plane-departure' />
-						DEPARTURES
+					  	DEPARTURES
 					</Link>
           <Link to='/arrivals' className='nav-item' onClick={getArrivalList}>
             <i className='fas fa-plane-arrival' />
-						ARRIVALS
+					  	ARRIVALS
 					</Link>
         </div>
       </div>
