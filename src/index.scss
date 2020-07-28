@@ -109,6 +109,7 @@ body {
     transition-property: all;
     transition-timing-function: ease-in-out;
     opacity: 0.6;
+    text-decoration: none;
 }
 
 .nav-item__active:hover {
@@ -130,6 +131,7 @@ body {
     color: #1EB7EE;
     font-size: 24px;
     padding: 0px 0px 0px 30px;
+    text-decoration: none;
 }
 
 .tabs-container {

@@ -7,17 +7,13 @@ const Buttons = ({ getArrivalList, getDepartureList }) => {
 		<div className="buttons">
 			<div className="nav_nav-tabs">
 				<div className="container-nav">
-					<Link to="/departures">
-						<button className="nav-item__active" onClick={getDepartureList}>
-							<i className="fas fa-plane-departure" />
-							DEPARTURES
-						</button>
+					<Link to="/departures" className="nav-item__active" onClick={getDepartureList}>
+						<i className="fas fa-plane-departure" />
+						DEPARTURES
 					</Link>
-					<Link to="/arrivals">
-						<button className="nav-item" onClick={getArrivalList}>
-							<i className="fas fa-plane-arrival" />
-							ARRIVALS
-						</button>
+					<Link to="/arrivals" className="nav-item" onClick={getArrivalList}>
+						<i className="fas fa-plane-arrival" />
+						ARRIVALS
 					</Link>
 				</div>
 			</div>
