@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import Scoreboard from "./Scoreboard.jsx";
 import * as scoreboardActions from "../scoreboard.actions";
 
+
 const Page = ({ getFilteredText }) => {
 	return (
 		<BrowserRouter>
