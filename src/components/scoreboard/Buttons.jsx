@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
+
 const Buttons = ({ getArrivalList, getDepartureList }) => {
   return (
     <div className='buttons'>
