@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import { getTime } from '../functions';
+import { getTime } from '../getTime';
 
 const RacesList = ({ flightsList }) => {
 	
