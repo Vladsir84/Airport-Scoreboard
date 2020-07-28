@@ -2,8 +2,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
-
 const Buttons = ({ getArrivalList, getDepartureList }) => {
   return (
     <div className='buttons'>
@@ -11,10 +9,10 @@ const Buttons = ({ getArrivalList, getDepartureList }) => {
         <div className='container-nav'>
           <Link to='/departures' className='nav-item__active' onClick={getDepartureList}>
             <i className='fas fa-plane-departure' /> DEPARTURES
-					</Link>
+			      </Link>
           <Link to='/arrivals' className='nav-item' onClick={getArrivalList}>
             <i className='fas fa-plane-arrival' /> ARRIVALS
-					</Link>
+					  </Link>
         </div>
       </div>
     </div>
