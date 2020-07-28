@@ -1,15 +1,15 @@
 /* eslint-disable no-dupe-keys */
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
-import { connect } from 'react-redux';
-import { Link, Route, Switch, useHistory, useLocation } from 'react-router-dom';
-import RacesList from './RacesList.jsx';
-import Buttons from './Buttons.jsx';
-import * as scoreboardActions from '../scoreboard.actions';
-import * as scoreboardSelectors from '../scoreboard.selectors';
+import React, { useEffect, useState } from "react";
+import { connect } from "react-redux";
+import { Link, Route, Switch, useHistory, useLocation } from "react-router-dom";
+import RacesList from "./RacesList.jsx";
+import Buttons from "./Buttons.jsx";
+import * as scoreboardActions from "../scoreboard.actions";
+import * as scoreboardSelectors from "../scoreboard.selectors";
 
 const Scoreboard = ({ flightsList, getArrivalList, getDepartureList, getFilteredText }) => {
-	const [filteredText, setFilteredText] = useState('');
+	const [filteredText, setFilteredText] = useState("");
 
 	const history = useHistory();
 	const location = useLocation();
@@ -25,22 +25,22 @@ const Scoreboard = ({ flightsList, getArrivalList, getDepartureList, getFiltered
 	}, []);
 
 	return (
-		<div className="page">
-			<div className="search-flights">
-				<div className="container">
-					<h1 className="title">SEARCH FLIGHT</h1>
-					<div className="search-line-container">
+		<div className='page'>
+			<div className='search-flights'>
+				<div className='container'>
+					<h1 className='title'>SEARCH FLIGHT</h1>
+					<div className='search-line-container'>
 						<Link to={`${history.location.pathname}?search=${filteredText}`}>
-							<form name="searchFlightsForm" action="">
+							<form name='searchFlightsForm' action=''>
 								<input
-									type="text"
+									type='text'
 									value={filteredText}
 									onChange={(event) => setFilteredText(event.target.value)}
-									placeholder="Airline, destination or flight#"
+									placeholder='Airline, destination or flight#'
 								/>
 								<button
-									type="submit"
-									className="search-line-container__button"
+									type='submit'
+									className='search-line-container__button'
 									onClick={() => getFilteredText(filteredText)}
 								>
 									SEARCH
@@ -50,14 +50,11 @@ const Scoreboard = ({ flightsList, getArrivalList, getDepartureList, getFiltered
 					</div>
 				</div>
 			</div>
-			<Buttons 
-			   getDepartureList={getDepartureList} 
-			   getArrivalList={getArrivalList} 
-			/>
-           <div className="tabs-container">
+			<Buttons getDepartureList={getDepartureList} getArrivalList={getArrivalList} />
+			<div className='tabs-container'>
 				<table>
 					<thead>
-						<tr className="table-striped">
+						<tr className='table-striped'>
 							<th>Terminal</th>
 							<th>Local time</th>
 							<th>Destination</th>

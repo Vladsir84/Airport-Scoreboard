@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { connect } from 'react-redux';
-import Scoreboard from './Scoreboard.jsx';
-import * as scoreboardActions from '../scoreboard.actions';
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import { connect } from "react-redux";
+import Scoreboard from "./Scoreboard.jsx";
+import * as scoreboardActions from "../scoreboard.actions";
 
 const Page = ({ getFilteredText }) => {
 	return (

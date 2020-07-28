@@ -1,34 +1,33 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
-import { getTime } from '../getTime';
+import React from "react";
+import { getTime } from "../getTime";
 
 const RacesList = ({ flightsList }) => {
-
 	return (
 		<tbody>
 			{flightsList.map((elem) => (
 				<>
-					<tr className="table table-striped__grey" key={Math.random()}>
-						<th className="terminal">{elem.terminal}</th>
+					<tr className='table table-striped__grey' key={Math.random()}>
+						<th className='terminal'>{elem.terminal}</th>
 						<th>{getTime(elem.localTime)}</th>
 						<th>{elem.destination}</th>
 						<th>{elem.status}</th>
 						<th>
-							<span className="one-airline">
-								<img type="logo" className="logo" src={`${elem.airlineLogo}`} />
+							<span className='one-airline'>
+								<img type='logo' className='logo' src={`${elem.airlineLogo}`} />
 								{elem.airlineName}
 							</span>
 						</th>
 						<th>{elem.flight}</th>
 					</tr>
-					<tr className="table table-striped__white" key={Math.random()}>
-						<th className="terminal">{elem.terminal}</th>
+					<tr className='table table-striped__white' key={Math.random()}>
+						<th className='terminal'>{elem.terminal}</th>
 						<th>{getTime(elem.localTime)}</th>
 						<th>{elem.destination}</th>
 						<th>{elem.status}</th>
 						<th>
-							<span className="one-airline">
-								<img type="logo" className="logo" src={`${elem.airlineLogo}`} />
+							<span className='one-airline'>
+								<img type='logo' className='logo' src={`${elem.airlineLogo}`} />
 								{elem.airlineName}
 							</span>
 						</th>
@@ -39,6 +38,5 @@ const RacesList = ({ flightsList }) => {
 		</tbody>
 	);
 };
-
 
 export default RacesList;
