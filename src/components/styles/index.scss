@@ -1,0 +1,16 @@
+@import "buttons.scss";
+@import "scoreboard.scss";
+@import "races-list.scss";
+
+* {
+    box-sizing: border-box;
+    font-family: Open Sans, sans-serif;
+}
+
+body {
+    background: #e7efec;
+    color: #2f2f2f;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,51 @@
+.buttons {
+  margin-left: 70px;
+  width: 1140px;
+}
+
+.container-nav {
+  display: flex;
+}
+
+.nav-item__active {
+  width: 570px;
+  height: 60px;
+  background: #1EB7EE;
+  font-size: 24px;
+  border-top-left-radius: 40px;
+  text-align: right;
+  line-height: 60px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 0px 30px 0px 0px;
+  transition-delay: 0s;
+  transition-duration: 0.3s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.nav-item__active:hover {
+  opacity: 1;
+}
+
+.nav-item {
+  border: none;
+  width: 570px;
+  height: 60px;
+  background: #FFFFFF;
+  text-align: left;
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 100;
+  border-radius: 0 60px 0 0;
+  line-height: 60px;
+  color: #1EB7EE;
+  font-size: 24px;
+  padding: 0px 0px 0px 30px;
+  text-decoration: none;
+}

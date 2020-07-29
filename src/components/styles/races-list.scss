@@ -1,0 +1,53 @@
+.table-striped__grey {
+  background: #dee2e6;
+  height: 72px;
+  color: #212529;
+}
+
+.table-striped__white {
+  background: #FFFFFF;
+  height: 72px;
+  color: #212529;
+}
+
+.terminal {
+  color: #63c745;
+  font-weight: 700;
+  border: 1px solid #63c745;
+  border-radius: 50%;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 35px;
+  font-size: 22px;
+  margin-left: 50px;
+  margin-top: 15px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+}
+
+.logo {
+  height: 38px;
+  width: 63px;
+}
+
+.one-airline {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+tr {
+  display: table-row;
+}
+
+th {
+  font-size: 16px;
+  padding: 12px;
+  display: table-cell;
+  vertical-align: middle;
+  font-weight: bold;
+  text-align: center;
+}
