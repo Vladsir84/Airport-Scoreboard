@@ -7,45 +7,40 @@
   display: flex;
 }
 
-.nav-item__active {
+.nav-item {
   width: 570px;
   height: 60px;
-  background: #1EB7EE;
   font-size: 24px;
-  border-top-left-radius: 40px;
-  text-align: right;
   line-height: 60px;
   border: none;
-  color: #FFFFFF;
   cursor: pointer;
   font-size: 24px;
-  padding: 0px 30px 0px 0px;
+  text-decoration: none;
+  background: #ffffff;
+  color: #1eb7ee;
   transition-delay: 0s;
   transition-duration: 0.3s;
   transition-property: all;
   transition-timing-function: ease-in-out;
   opacity: 0.6;
-  text-decoration: none;
+
+  &__left {
+    border-top-left-radius: 40px;
+    text-align: right;
+    padding: 0px 30px 0px 0px;
+  }
+  
+  &__right {
+    border-radius: 0 60px 0 0;
+    padding: 0px 0px 0px 30px;
+  }
 }
 
-.nav-item__active:hover {
+.nav-item:hover {
   opacity: 1;
 }
 
-.nav-item {
-  border: none;
-  width: 570px;
-  height: 60px;
-  background: #FFFFFF;
-  text-align: left;
-  cursor: pointer;
-  text-transform: uppercase;
-  position: relative;
-  font-weight: 100;
-  border-radius: 0 60px 0 0;
-  line-height: 60px;
-  color: #1EB7EE;
-  font-size: 24px;
-  padding: 0px 0px 0px 30px;
-  text-decoration: none;
+.click {
+  background: #1eb7ee;
+  color: #ffffff;
 }

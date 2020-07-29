@@ -8,9 +8,14 @@ import Buttons from "./Buttons.jsx";
 import * as scoreboardActions from "../scoreboard.actions";
 import * as scoreboardSelectors from "../scoreboard.selectors";
 
-const Scoreboard = ({ flightsList, getArrivalList, getDepartureList, getFilteredText }) => {
-  const [filteredText, setFilteredText] = useState("");
+const Scoreboard = ({ flightsList,
+  getArrivalList,
+  getDepartureList,
+  getFilteredText,
+  departureActive,
+  arrivalActive }) => {
 
+  const [filteredText, setFilteredText] = useState("");
   const history = useHistory();
   const location = useLocation();
 
@@ -50,7 +55,12 @@ const Scoreboard = ({ flightsList, getArrivalList, getDepartureList, getFiltered
           </div>
         </div>
       </div>
-      <Buttons getDepartureList={getDepartureList} getArrivalList={getArrivalList} />
+      <Buttons
+        getDepartureList={getDepartureList}
+        getArrivalList={getArrivalList}
+        arrivalActive={arrivalActive}
+        departureActive={departureActive}
+      />
       <div className='tabs-container'>
         <table>
           <thead>
@@ -78,6 +88,8 @@ const mapState = (state) => {
   return {
     flightsList: scoreboardSelectors.flightsDataSelector(state),
     flightsList: scoreboardSelectors.filteredFlightsSelector(state),
+    departureActive: scoreboardSelectors.scoreboardDepartureSelector(state),
+    arrivalActive: scoreboardSelectors.scoreboardArrivalSelector(state),
   };
 };
 

@@ -37,6 +37,7 @@
     },
     "dependencies": {
         "babel-eslint": "^10.1.0",
+        "classnames": "^2.2.6",
         "core-js": "^3.6.5",
         "eslint-config-airbnb-base": "^14.2.0",
         "moment": "^2.27.0",
