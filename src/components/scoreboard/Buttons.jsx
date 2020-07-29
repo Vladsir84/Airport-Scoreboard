@@ -5,11 +5,11 @@ import classNames from "classnames";
 
 const Buttons = ({ getArrivalList, getDepartureList, arrivalActive, departureActive }) => {
   const departureButtonClass = classNames('nav-item nav-item__left',
-    { click: departureActive }
+    { handleClick: departureActive }
   );
 
   const arrivalButtonClass = classNames('nav-item nav-item__right',
-    { click: arrivalActive }
+    { handleClick: arrivalActive }
   );
 
   return (
