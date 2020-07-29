@@ -48,6 +48,10 @@
   transition-timing-function: ease-in-out;
 }
 
+.search-line-container button:hover {
+  border-radius: 0 40px 0 0;
+}
+
 .searchFlightsForm {
   height: 40px;
   width: 100%;
@@ -63,10 +67,6 @@
   border: none;
   width: 100%;
   border-radius: 0 90px 0 0;
-}
-
-.search-line-container button:hover {
-  border-radius: 0 40px 0 0;
 }
 
 .tabs-container {
