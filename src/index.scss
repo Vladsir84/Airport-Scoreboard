@@ -1,6 +1,6 @@
-@import "../main/Buttons/buttons.scss";
-@import "../main/RacesList/races-list.scss";
-@import "../main/Scoreboard/scoreboard.scss";
+@import "./components/Buttons/buttons.scss";
+@import "./components/RacesList/races-list.scss";
+@import "./components/Scoreboard/scoreboard.scss";
 
 * {
     box-sizing: border-box;

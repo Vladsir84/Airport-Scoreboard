@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import Scoreboard from "../Scoreboard/Scoreboard.jsx";
-import * as scoreboardActions from "../../scoreboard.actions";
+import * as scoreboardActions from "../scoreboard.actions";
 
 
 const Page = ({ getFilteredText }) => {

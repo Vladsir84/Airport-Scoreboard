@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { Provider } from 'react-redux';
-import Page from './components/main/Page/Page.jsx';
+import Page from './components/Page/Page.jsx';
 import store from './store';
 
 const App = () => (

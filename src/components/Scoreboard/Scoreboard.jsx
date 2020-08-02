@@ -5,8 +5,8 @@ import { connect } from "react-redux";
 import { Link, Route, Switch, useHistory, useLocation } from "react-router-dom";
 import RacesList from "../RacesList/RacesList.jsx";
 import Buttons from "../Buttons/Buttons.jsx";
-import * as scoreboardActions from "../../scoreboard.actions";
-import * as scoreboardSelectors from "../../scoreboard.selectors";
+import * as scoreboardActions from "../scoreboard.actions";
+import * as scoreboardSelectors from "../scoreboard.selectors";
 
 const Scoreboard = ({ flightsList,
   getArrivalList,
